@@ -4,7 +4,7 @@ let filterType = "all";
 
 
 let stored = localStorage.getItem("transactions");
-//let data = stored ? JSON.parse(stored) : transactions;
+
 let data = JSON.parse(localStorage.getItem("transactions")) || transactions;
 
 
@@ -165,7 +165,6 @@ function renderChart() {
   const canvas = document.getElementById("expenseChart");
   const ctx = canvas.getContext("2d");
 
- 
   if (chart) {
     chart.destroy();
   }

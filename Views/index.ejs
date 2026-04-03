@@ -10,7 +10,7 @@
 
 <div class="app-container">
    <table>
-  
+ 
   <div class="topbar">
     <h1>Finance Dashboard</h1>
 
@@ -24,7 +24,6 @@
     </div>
   </div>
 
-  
   <div class="cards">
     <div class="card income">
       <h2>₹ <span id="income"></span></h2>
@@ -42,7 +41,6 @@
     </div>
   </div>
 
-  
   <div class="charts">
     <div class="chart-box">
       <h3>Spending Breakdown (Expenses)</h3>
@@ -50,7 +48,6 @@
     </div>
   </div>
 
- 
   <div class="insights">
     <h3>Insights</h3>
     <p id="insightText"></p>
@@ -70,7 +67,6 @@
   <option value="expense">Expense</option>
 </select>
 
-  
   <div class="controls">
     <input type="text" id="search" placeholder="Search transactions">
 
@@ -79,7 +75,6 @@
     </button>
   </div>
 
-  
   <div id="adminForm" class="admin-only form-card">
     <h3>Add Transaction</h3>
 
@@ -95,7 +90,6 @@
     <button style="background-color: blue;" onclick="addTransaction()"> Add Transaction</button>
   </div>
 
- 
   <div class="table-container">
     <h3>Transactions</h3>
 
@@ -129,6 +123,7 @@
 </div>
 
 <script>
+
   const transactions = JSON.parse('<%- JSON.stringify(transactions) %>');
 
 

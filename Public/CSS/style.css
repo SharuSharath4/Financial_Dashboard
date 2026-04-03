@@ -195,7 +195,6 @@ tr:hover {
   display: none;
 }
 
-
 .dark {
   background: #0f172a;
   color: white;
@@ -277,7 +276,6 @@ body {
     gap: 10px;
   }
 
-
   .cards {
     grid-template-columns: 1fr;
   }
@@ -294,7 +292,6 @@ body {
     width: 100%;
   }
 
- 
   #adminForm {
     display: flex;
     flex-direction: column;
