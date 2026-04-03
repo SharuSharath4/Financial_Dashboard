@@ -10,9 +10,9 @@
 
 <div class="app-container">
    <table>
-  <!-- Topbar -->
+ 
   <div class="topbar">
-    <h1>💰 Finance Dashboard</h1>
+    <h1>Finance Dashboard</h1>
 
     <div class="top-actions">
       <select id="role">
@@ -24,7 +24,7 @@
     </div>
   </div>
 
-  <!-- Summary Cards -->
+
   <div class="cards">
     <div class="card income">
       <h2>₹ <span id="income"></span></h2>
@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <!-- Charts Section -->
+
   <div class="charts">
     <div class="chart-box">
       <h3>Spending Breakdown (Expenses)</h3>
@@ -50,9 +50,9 @@
     </div>
   </div>
 
-  <!-- Insights -->
+
   <div class="insights">
-    <h3>📊 Insights</h3>
+    <h3>Insights</h3>
     <p id="insightText"></p>
   </div>
   <select id="sort">
@@ -70,7 +70,7 @@
   <option value="expense">Expense</option>
 </select>
 
-  <!-- Controls -->
+
   <div class="controls">
     <input type="text" id="search" placeholder="🔍 Search transactions">
 
@@ -79,7 +79,7 @@
     </button>
   </div>
 
-  <!-- Admin Form -->
+
   <div id="adminForm" class="admin-only form-card">
     <h3>Add Transaction</h3>
 
@@ -95,7 +95,7 @@
     <button style="background-color: blue;" onclick="addTransaction()"> Add Transaction</button>
   </div>
 
-  <!-- Table -->
+
   <div class="table-container">
     <h3>Transactions</h3>
 
@@ -129,6 +129,7 @@
 </div>
 
 <script>
+
   const transactions = JSON.parse('<%- JSON.stringify(transactions) %>');
 </script>
 
