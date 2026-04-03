@@ -103,43 +103,7 @@ Financial_Dashboard/
 │── app.js
 │── package.json
 │── .gitignore
-```
 
----
-
-##  Run Locally
-
-1. Clone the repository:
-
-```
-git clone https://github.com/your-username/Financial_Dashboard.git
-```
-
-2. Navigate to project:
-
-```
-cd Financial_Dashboard
-```
-
-3. Install dependencies:
-
-```
-npm install
-```
-
-4. Run the server:
-
-```
-node app.js
-```
-
-5. Open in browser:
-
-```
-http://localhost:3000
-```
-
----
 
 ##  Live Demo
 
