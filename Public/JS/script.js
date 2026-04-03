@@ -2,18 +2,18 @@ let role = "viewer";
 let sortBy = "";
 let filterType = "all";
 
-// Load from localStorage or default
+
 let stored = localStorage.getItem("transactions");
-//let data = stored ? JSON.parse(stored) : transactions;
+
 let data = JSON.parse(localStorage.getItem("transactions")) || transactions;
 
-// Elements
+
 const incomeEl = document.getElementById("income");
 const expenseEl = document.getElementById("expense");
 const balanceEl = document.getElementById("balance");
 const insightText = document.getElementById("insightText");
 
-// ===== RENDER FUNCTION =====
+
 function renderUI() {
   let income = 0, expense = 0;
 
@@ -31,7 +31,7 @@ function renderUI() {
   renderInsights();
 }
 
-// ===== TABLE =====
+
 function renderTable() {
   const table = document.getElementById("tableBody");
   if (!table) return;
@@ -39,12 +39,12 @@ function renderTable() {
 
   let filteredData = [...data];
 
-  // ✅ 1. FILTER
+
   if (filterType !== "all") {
     filteredData = filteredData.filter(t => t.type === filterType);
   }
 
-  // ✅ 2. SEARCH
+ 
   //const searchValue = document.getElementById("search").value.toLowerCase();
    const searchValue = document.getElementById("search")?.value?.toLowerCase() || "";
   if (searchValue) {
@@ -54,7 +54,7 @@ function renderTable() {
     );
   }
 
-  // ✅ 3. SORT
+
   if (sortBy === "amount-high") {
     filteredData.sort((a, b) => b.amount - a.amount);
   } else if (sortBy === "amount-low") {
@@ -65,7 +65,7 @@ function renderTable() {
     filteredData.sort((a, b) => new Date(a.date) - new Date(b.date));
   }
 
-  // ✅ 4. RENDER
+ 
   filteredData.forEach((t, index) => {
     const row = document.createElement("tr");
 
@@ -93,7 +93,7 @@ function renderTable() {
   toggleAdmin();
 }
 
-// ===== DELETE =====
+
 function deleteTransaction(index) {
   const tableRows = document.querySelectorAll("#tableBody tr");
   const row = tableRows[index];
@@ -110,7 +110,7 @@ function deleteTransaction(index) {
   renderUI();
 }
 
-// ===== ADD =====
+
 function addTransaction() {
   const date = document.getElementById("date").value;
   const category = document.getElementById("category").value.trim();
@@ -133,7 +133,7 @@ function addTransaction() {
   document.getElementById("amount").value = "";
 }
 
-// ===== INSIGHTS =====
+
 function renderInsights() {
   const categoryTotals = {};
 
@@ -150,7 +150,7 @@ function renderInsights() {
   insightText.innerText = `📊 Highest spending: ${highest}`;
 }
 
-// ===== CHART =====
+
 let chart;
 
 function renderChart() {
@@ -165,7 +165,7 @@ function renderChart() {
   const canvas = document.getElementById("expenseChart");
   const ctx = canvas.getContext("2d");
 
-  // destroy old chart
+
   if (chart) {
     chart.destroy();
   }
@@ -214,7 +214,7 @@ function exportCSV() {
   URL.revokeObjectURL(url);
 }
 
-// ===== ROLE =====
+
 document.getElementById("role").addEventListener("change", (e) => {
   role = e.target.value;
   toggleAdmin();
@@ -226,7 +226,7 @@ function toggleAdmin() {
   });
 }
 
-// ===== SEARCH =====
+
 //document.getElementById("search").addEventListener("input", function () {
   //const value = this.value.toLowerCase();
 
@@ -238,7 +238,7 @@ document.getElementById("search").addEventListener("input", () => {
   renderTable();
 });
 
-// ===== DARK MODE =====
+
 document.getElementById("darkToggle").addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
@@ -253,5 +253,3 @@ document.getElementById("filterType").addEventListener("change", (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   renderUI();
 });
-// INIT
-//renderUI();
