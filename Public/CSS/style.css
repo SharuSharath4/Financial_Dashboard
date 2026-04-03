@@ -1,4 +1,4 @@
-/* ===== GLOBAL ===== */
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -7,14 +7,14 @@ body {
   animation: fadeIn 0.5s ease-in;
 }
 
-/* Container */
+
 .app-container {
   max-width: 1200px;
   margin: auto;
   padding: 20px;
 }
 
-/* ===== TOPBAR ===== */
+
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -32,7 +32,7 @@ body {
   gap: 10px;
 }
 
-/* ===== CARDS ===== */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -63,7 +63,7 @@ body {
   transform: translateY(-5px);
 }
 
-/* Colors */
+
 .income {
   background: linear-gradient(135deg, #16a34a, #22c55e);
 }
@@ -74,7 +74,7 @@ body {
   background: linear-gradient(135deg, #2563eb, #3b82f6);
 }
 
-/* ===== CHARTS ===== */
+
 .charts {
   display: grid;
   grid-template-columns: 1fr;
@@ -92,7 +92,7 @@ canvas {
   max-width: 100%;
 }
 
-/* ===== INSIGHTS ===== */
+
 .insights {
   background: white;
   padding: 18px;
@@ -101,7 +101,7 @@ canvas {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* ===== CONTROLS ===== */
+
 .controls {
   display: flex;
   justify-content: space-between;
@@ -122,7 +122,7 @@ input:focus, select:focus {
   border-color: #2563eb;
 }
 
-/* ===== BUTTONS ===== */
+
 button {
   padding: 8px 14px;
   border-radius: 8px;
@@ -151,7 +151,7 @@ button:active {
   background: #15803d;
 }
 
-/* ===== FORM ===== */
+
 .form-card {
   background: white;
   padding: 18px;
@@ -160,7 +160,7 @@ button:active {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* ===== TABLE ===== */
+
 .table-container {
   background: white;
   padding: 15px;
@@ -191,12 +191,11 @@ tr:hover {
   background: #e2e8f0;
 }
 
-/* ===== ADMIN ===== */
+
 .admin-only {
   display: none;
 }
 
-/* ===== DARK MODE ===== */
 .dark {
   background: #0f172a;
   color: white;
@@ -218,7 +217,7 @@ tr:hover {
   background: #1e293b;
 }
 
-/* ===== ANIMATIONS ===== */
+
 * {
   transition: all 0.25s ease;
 }
@@ -234,7 +233,7 @@ tr:hover {
   }
 }
 
-/* ===== RESPONSIVE ===== */
+
 @media (max-width: 768px) {
   .cards {
     grid-template-columns: 1fr;
@@ -253,9 +252,9 @@ tr:hover {
 body {
   background: linear-gradient(135deg, #dbeafe, #f0f9ff, #fef9c3);
 }
-/* ===== RESPONSIVE DESIGN ===== */
 
-/* Tablet */
+
+
 @media (max-width: 1024px) {
   .app-container {
     padding: 15px;
@@ -270,22 +269,21 @@ body {
   }
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
 
-  /* Topbar stack */
+
   .topbar {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
 
-  /* Cards stack */
   .cards {
     grid-template-columns: 1fr;
   }
 
-  /* Controls stack */
+
   .controls {
     flex-direction: column;
     align-items: stretch;
@@ -297,7 +295,7 @@ body {
     width: 100%;
   }
 
-  /* Form vertical */
+
   #adminForm {
     display: flex;
     flex-direction: column;
@@ -309,7 +307,7 @@ body {
     width: 100%;
   }
 
-  /* Table scroll (VERY IMPORTANT) */
+
   .table-container {
     overflow-x: auto;
   }
@@ -318,7 +316,7 @@ body {
     min-width: 600px;
   }
 
-  /* Chart smaller */
+
   canvas {
     max-width: 100%;
   }
