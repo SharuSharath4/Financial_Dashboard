@@ -93,7 +93,7 @@ This project demonstrates frontend design, state management, and basic backend i
 
 ##  Project Structure
 
-//```
+```
 Financial_Dashboard/
 │── public/
 │   ├── css/
@@ -103,7 +103,7 @@ Financial_Dashboard/
 │── app.js
 │── package.json
 │── .gitignore
----//
+```
 ##  Live Demo
 
  https://financial-dashboard-j0ix.onrender.com
